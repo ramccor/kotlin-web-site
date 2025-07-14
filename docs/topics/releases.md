@@ -31,8 +31,14 @@ new features before they are released. See [Early Access Preview](eap.md) for de
 
 ## Update to a new Kotlin version
 
-To upgrade your project to a new release, you need to update your build script file.
-For example, to update to Kotlin %kotlinVersion%, change the version of the Kotlin Gradle plugin in your
+To upgrade your project to a new release, update the Kotlin version in your build system:
+
+* [Gradle](#gradle)
+* [Maven](#maven)
+
+### Gradle
+
+To update to Kotlin %kotlinVersion%, change the version of the Kotlin Gradle plugin in your
 `build.gradle(.kts)` file:
 
 <tabs group="build-script">
@@ -66,10 +72,31 @@ plugins {
 </tab>
 </tabs>
 
-If you have projects created with earlier Kotlin versions, change the Kotlin version in your projects and update kotlinx
-libraries if necessary.
+If you have projects created with earlier Kotlin versions, check if you need to also [update the version of any kotlinx
+libraries](gradle-configure-project.md#set-a-dependency-on-a-kotlinx-library).
 
-If you are migrating to the new language release, Kotlin plugin's migration tools will help you with the migration.
+If you are migrating to a new language release, the Kotlin plugin's migration tools will help you with the migration.
+
+> To learn more about how to work with Gradle in your project, see [Configure a Gradle project](gradle-configure-project.md).
+> 
+{style="tip"}
+
+### Maven
+
+To update to Kotlin %kotlinVersion%, change the version in your `pom.xml` file:
+
+```xml
+<properties>
+    <kotlin.version>%kotlinVersion%</kotlin.version>
+</properties>
+```
+
+If you have projects created with earlier Kotlin versions, check if you need to also [update the version of any kotlinx
+libraries](maven.md#set-dependencies).
+
+> To learn more about how to work with Maven in your project, see [Maven](maven.md).
+>
+{style="tip"}
 
 ## IDE support
 
