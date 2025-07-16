@@ -91,6 +91,18 @@ To update to Kotlin %kotlinVersion%, change the version in your `pom.xml` file:
 </properties>
 ```
 
+Alternatively, you can change the version of the `kotlin-maven-plugin` in your `pom.xml` file:
+
+```xml
+<plugins>
+    <plugin>
+        <groupId>org.jetbrains.kotlin</groupId>
+        <artifactId>kotlin-maven-plugin</artifactId>
+        <version>%kotlinVersion%</version>
+    </plugin>
+</plugins>
+```
+
 If you have projects created with earlier Kotlin versions, check if you need to also [update the version of any kotlinx
 libraries](maven.md#set-dependencies).
 
